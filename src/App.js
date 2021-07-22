@@ -8,7 +8,6 @@ import data from "./data.json";
 const App = () => {
   const [searchStr, setSearchStr] = useState("");
   const [treeData, setTreeData] = useState(data);
-  console.log(`treeData`, treeData);
 
   const handleSearch = useCallback((searchValue) => {
     setSearchStr(searchValue);

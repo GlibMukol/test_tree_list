@@ -7,11 +7,10 @@ import { Box } from "@material-ui/core";
 const RenderItems = ({ data }) => {
   const renderedData = data.map((item, idx) => {
     const { type, name } = item;
-      console.log(`tyt`);
-      if (type === "FOLDER") {
-        return <Folder {...item} key={`${type}_${name}_${idx}`} />;
-      }
-      return <File {...item} key={`${type}_${name}_${idx}`} />;
+    if (type === "FOLDER") {
+      return <Folder {...item} key={`${type}_${name}_${idx}`} />;
+    }
+    return <File {...item} key={`${type}_${name}_${idx}`} />;
   });
   return <Box paddingLeft="2vw">{renderedData}</Box>;
 };
